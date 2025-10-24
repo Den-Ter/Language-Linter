@@ -1,0 +1,29 @@
+{
+  "name": "language-linter",
+  "displayName": "Language Linter",
+  "description": "Плагин для проверки наличия русских символов в коде и замены их на латиницу",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {},
+  "contributes": {
+    "commands": [
+      {
+        "command": "language-linter.checkFile",
+        "title": "Проверить файл на русские символы"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:language-linter.checkFile",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python",
+    "onLanguage:plaintext"
+  ]
+}
